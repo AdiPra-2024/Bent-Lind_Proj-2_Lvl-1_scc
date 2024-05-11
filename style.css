@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+#main {
+  height: 100%;
+  width: 100%;
+}
+#intro {
+  height: 42%;
+  width: 100%;
+  padding: 20px 30px;
+}
+#intro h1 {
+  font-weight: 500;
+  letter-spacing: -3px; /* for spacing in between letters */
+  font-size: 110px;
+  line-height: 120px; /* use for distance between the h1 heading lines */
+}
+#nav {
+  position: fixed;
+  width: 100%;
+  height: 7%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /*to place items at the end of x axis rightmost*/
+  padding: 10px 20px;
+}
+#nav h3 {
+  background-color: black;
+  color: white;
+  font-size: 17px;
+  border-radius: 50px;
+  padding: 6px 10px;
+  font-weight: 500;
+  margin-left: 5px;
+}
+#place {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+#place h3,
+#place h4 {
+  font-size: 20px;
+  font-weight: 550;
+}
+#bent_pic {
+  height: 100%;
+  width: 100%;
+  background-image: url(https://assets-global.website-files.com/64589fb989b2b33c593db89d/6458a6db645ec6a527000cfa_home-hero.webp);
+  background-size: cover;
+  background-position: center;
+}
+#about {
+  height: 45%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 30px;
+  /* why this padding not working perfectly?: changing value upto 150px causing no change*/
+}
+#about h2 {
+  width: 65%;
+  font-size: 66px;
+  letter-spacing: -2px;
+  font-weight: 300;
+  line-height: 68px;
+}
+#about_right {
+  width: 35%;
+  /* height: 100%; why border getting vanished if using this?*/
+  /* border how cut about content? how to get it full? */
+  border-left: 2px solid black;
+  padding: 0px 40px;
+  /*[ below code: used to turn (cross[y] and main[x] axis by 90 deg): { this is done to create space between about me and icons }, as we use justify-content:space between which creates space along x axis but here we need that space along y axis.. but its not working as shown,why? ]*/
+  /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+}
+#about_right h3 {
+  font-size: 25px;
+}
+#media_icons {
+  padding: 210px 0px 10px 0px; /* for space below about me */
+}
+#media_icons i {
+  font-size: 25px;
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  padding: 5px 5px;
+  margin-right: 5px;
+}
+#work {
+  background-color: rgb(248, 238, 225);
+  height: 42%;
+  width: 100%;
+  border-top: 2px solid black;
+  padding: 25px 30px;
+  display: flex;
+  /* if height defined under main div then do we need to define it again under child div for if we want to keep same height? */
+}
+#work1 {
+  width: 25%;
+  height: 100%;
+  border-right: 2px solid black;
+  padding-right: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+#work1 h3 {
+  font-size: 23px;
+  font-weight: 600;
+}
+#work1 i {
+  font-size: 23px;
+}
+#work2 {
+  width: 75%;
+  height: 100%;
+  padding: 0px 40px;
+}
+.work2-part {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0px;
+}
+.work2-part:nth-child(1) {
+  /* upper half of right work */
+  border-bottom: 2px solid black;
+  padding-top: 0px;
+}
+.work2-part .elem {
+  /*every elem div insite the work_right*/
+  width: 50%;
+  height: 100%;
+}
+.work2-part .elem:nth-child(1) {
+  /* both left elem divs of right work*/
+  border-right: 2px solid black;
+  padding-right: 40px;
+
+}
+.work2-part .elem:nth-child(2) {
+  /* both right elem divs of right work*/
+  padding-left: 50px;
+}
+.work2-part .elem h4 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+.work2-part .elem p {
+  font-size: 16px;
+  color: rgb(102, 22, 22);
+  font-weight: 500;
+}
